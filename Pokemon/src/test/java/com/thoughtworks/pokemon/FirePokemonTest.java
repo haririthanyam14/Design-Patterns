@@ -30,14 +30,17 @@ public class FirePokemonTest {
     public void shouldEvolvePokemon() {
         FirePokemon charmander =  new Charmander();
         FirePokemon charmeleon =  new Charmeleon();
+        charmander.setEvolveBehaviour(new EvolveByLevelUp());
+        charmeleon.setEvolveBehaviour(new EvolveByStone());
 
-        assertEquals("Obtained Evolution Stone - So evolve", charmander.evolvePokemon());
-        assertEquals("Level Up - So evolve", charmeleon.evolvePokemon());
+        assertEquals("Level Up - So evolve", charmander.evolvePokemon());
+        assertEquals("Obtained Evolution Stone - So evolve", charmeleon.evolvePokemon());
     }
 
     @Test
     public void shouldNotEvolve() {
         FirePokemon charizard =  new Charizard();
+        charizard.setEvolveBehaviour(new NoEvolution());
 
         assertEquals("No more evolution",charizard.evolvePokemon());
     }
