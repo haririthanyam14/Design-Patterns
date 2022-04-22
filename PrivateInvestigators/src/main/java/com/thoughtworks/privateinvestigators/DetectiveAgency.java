@@ -5,9 +5,9 @@ public class DetectiveAgency {
     private String evidence;
     private String witnessInformation;
     private Source source;
-    private SherlockHolmes sherlockHolmes;
-    private HerculesPoirot herculesPoirot;
-    private Marple marple;
+    private Detective sherlockHolmes;
+    private Detective herculesPoirot;
+    private Detective marple;
 
     public DetectiveAgency(Source source, SherlockHolmes sherlockHolmes, HerculesPoirot herculesPoirot, Marple marple) {
         this.source = source;

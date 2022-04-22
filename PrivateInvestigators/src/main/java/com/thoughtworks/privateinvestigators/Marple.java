@@ -1,10 +1,11 @@
 package com.thoughtworks.privateinvestigators;
 
-public class Marple {
+public class Marple implements Detective{
     private String location;
     private String evidence;
     private String witnessInformation;
 
+    @Override
     public void update(String location, String evidence, String witnessInformation) {
         this.location = location;
         this.evidence = evidence;
@@ -12,6 +13,7 @@ public class Marple {
         investigate();
     }
 
+    @Override
     public String investigate() {
         return new StringBuilder("Marple solving crime with every stitch at ").append(location).toString();
     }
