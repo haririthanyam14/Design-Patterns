@@ -9,6 +9,5 @@ public abstract class FirePokemon {
         return "Observe opponent - so defend";
     }
 
-    public abstract String evolve();
     public abstract String display();
 }

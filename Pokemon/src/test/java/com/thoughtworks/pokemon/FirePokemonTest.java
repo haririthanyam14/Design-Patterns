@@ -29,17 +29,19 @@ public class FirePokemonTest {
 
     @Test
     public void shouldEvolvePokemon() {
-        FirePokemon charmander =  new Charmander();
-        FirePokemon charmeleon =  new Charmeleon();
+        Charmander charmander =  new Charmander();
+        Charmeleon charmeleon =  new Charmeleon();
 
         assertEquals("Evolve Pokemon to Charmeleon", charmander.evolve());
         assertEquals("Evolve Pokemon to Charizard", charmeleon.evolve());
     }
 
-    @Test
-    public void shouldNotEvolve() {
-        FirePokemon charizard =  new Charizard();
+//    Compilation error as Charizard no longer has the evolve behaviour
+//    @Test
+//    public void shouldNotEvolve() {
+//        FirePokemon charizard =  new Charizard();
+//
+//        assertNull(charizard.evolve());
+//    }
 
-        assertNull(charizard.evolve());
-    }
 }
