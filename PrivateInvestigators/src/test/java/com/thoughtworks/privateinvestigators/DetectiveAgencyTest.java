@@ -16,7 +16,10 @@ public class DetectiveAgencyTest {
         String evidence = "A blade with stains";
         String witnessInformation = "No witness";
         Source source = new Source(location, evidence, witnessInformation);
-        DetectiveAgency detectiveAgency = new DetectiveAgency(source, sherlockHolmes,herculesPoirot, marple);
+        DetectiveAgency detectiveAgency = new DetectiveAgency(source);
+        detectiveAgency.register(sherlockHolmes);
+        detectiveAgency.register(herculesPoirot);
+        detectiveAgency.register(marple);
         detectiveAgency.informationReceived();
 
         verify(sherlockHolmes, times(1)).update(location, evidence, witnessInformation);
