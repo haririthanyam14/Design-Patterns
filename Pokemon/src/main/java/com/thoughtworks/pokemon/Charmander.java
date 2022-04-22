@@ -1,7 +1,7 @@
 package com.thoughtworks.pokemon;
 
 
-public class Charmander extends FirePokemon implements Evolve{
+public class Charmander extends FirePokemon implements EvolveBehaviour {
 
     @Override
     public String evolve() {
