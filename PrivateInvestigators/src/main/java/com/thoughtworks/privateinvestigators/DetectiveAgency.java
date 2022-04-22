@@ -21,5 +21,8 @@ public class DetectiveAgency {
         this.evidence = source.getEvidence();
         this.witnessInformation = source.getWitnessInformation();
 
+        sherlockHolmes.update(location, evidence, witnessInformation);
+        herculesPoirot.update(location, evidence, witnessInformation);
+        marple.update(location, evidence, witnessInformation);
     }
 }
