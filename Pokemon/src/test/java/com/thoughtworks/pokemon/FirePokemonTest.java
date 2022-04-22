@@ -3,7 +3,6 @@ package com.thoughtworks.pokemon;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class FirePokemonTest {
     @Test
@@ -29,19 +28,18 @@ public class FirePokemonTest {
 
     @Test
     public void shouldEvolvePokemon() {
-        Charmander charmander =  new Charmander();
-        Charmeleon charmeleon =  new Charmeleon();
+        FirePokemon charmander =  new Charmander();
+        FirePokemon charmeleon =  new Charmeleon();
 
-        assertEquals("Evolve Pokemon to Charmeleon", charmander.evolve());
-        assertEquals("Evolve Pokemon to Charizard", charmeleon.evolve());
+        assertEquals("Obtained Evolution Stone - So evolve", charmander.evolvePokemon());
+        assertEquals("Level Up - So evolve", charmeleon.evolvePokemon());
     }
 
-//    Compilation error as Charizard no longer has the evolve behaviour
-//    @Test
-//    public void shouldNotEvolve() {
-//        FirePokemon charizard =  new Charizard();
-//
-//        assertNull(charizard.evolve());
-//    }
+    @Test
+    public void shouldNotEvolve() {
+        FirePokemon charizard =  new Charizard();
+
+        assertEquals("No more evolution",charizard.evolvePokemon());
+    }
 
 }
